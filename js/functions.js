@@ -3,7 +3,7 @@
  */
 
 let currentStep = 1;
-let maxNumberOfStep = 5
+let maxNumberOfStep = 5;
 let maxOfGeneratedNumber = 100;
 let generatedNumer = null;
 

@@ -14,8 +14,13 @@ while(currentStep > maxNumberOfStep){
         resetGame();
         break;
     }else{
+        // Eger kullanicinin girdigi sayi bilgisayarin tuttugundan kücük ise 
+        // "Lütfen sayiyi büyütünüz" Feedback ini verecek
+        // Tersi durumda da "Lütfen sayiyi kücültünüz" gösterecek
         feedback("Oooh! Leider haben Sie das Spiel verloren!");
     }
     
     currentStep++; // currentStep = currentStep + 1;
 }
+
+feedback("Oooh! Leider haben Sie das Spiel verloren!");
