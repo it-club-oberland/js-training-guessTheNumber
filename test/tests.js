@@ -6,9 +6,17 @@
 
 describe('Test Suite - Guess Game Funnctions', () => {
 
-    it('01) This function can add two numbers.', function(){
-        let result = sum(1, 3);
-        result.should.be.equal(4);
+    it('The generateANumber function should generate numbers randomly.', function(){
+        let result1 = generateANumber();
+        let result2 = generateANumber();
+        result1.should.not.be.equal(result2);
+    });
+    
+    
+    it('All parameters should be reset.', function(){
+        resetGame();
+        currentStep.should.be.equal(1);
+        currentStep.should.not.be.equal(5);
     });
       
 });

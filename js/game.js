@@ -2,6 +2,8 @@
  * Here is the guess game!
  */
 
+"use strict";
+
 resetGame();
 generatedNumber = generateANumber(maxOfGeneratedNumber);
 
@@ -19,8 +21,12 @@ while(currentStep < maxNumberOfStep){
         // Tersi durumda da "Lütfen sayiyi kücültünüz" gösterecek
         feedback("yaklastin");
     }
-    
+    let a= 5;
+    a++
     currentStep++; // currentStep = currentStep + 1;
 }
+
+
+
 
 feedback("Oooh! Leider haben Sie das Spiel verloren!");
