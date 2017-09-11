@@ -1,23 +1,37 @@
 /**
  * Please provide all your functions in this file.
  */
-
+ 
 let currentStep = 1;
 let maxNumberOfStep = 5;
-let maxOfGeneratedNumber = 100;
+let maxOfGeneratedNumber = 1000;
 let generatedNumber = null;
 
-
 function generateANumber(pMax){
-    // TODO: Implement this function!
+   return Math.floor(Math.random() * pMax);
 }
 
 function resetGame(){
-    // TODO: Implement this function!
+   currentStep = 1;
+   maxNumberOfStep = 5;
+   maxOfGeneratedNumber = 100;
+   generatedNumber = generateANumber(maxOfGeneratedNumber);
+   console.log('secilen sayi', generatedNumber);
 }
 
 function getUserGuess(pText, pMax){
-    return prompt(pText);
+   const girilenSayi = prompt(pText);
+   if(girilenSayi > pMax) {
+       alert("lutfen 100 un uzerinde rakam girmeyin!");
+       return false;
+   }
+
+   if(girilenSayi < 0) {
+    alert("lutfen 0 in altinda rakam girmeyin!");
+    return false;
+   }
+
+   return girilenSayi;
 }
 
 function feedback(pText){
