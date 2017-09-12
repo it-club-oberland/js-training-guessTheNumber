@@ -5,6 +5,7 @@
 "use strict";
 
 resetGame();
+
 // Game loop
 while(currentStep < maxNumberOfStep){
     let userGuess = getUserGuess("Bitte geben Sie Ihre Zahl!", maxOfGeneratedNumber);
@@ -16,10 +17,6 @@ while(currentStep < maxNumberOfStep){
           break;
         }
     } else {
-        // Eger kullanicinin girdigi sayi bilgisayarin tuttugundan kücük ise 
-        // "Lütfen sayiyi büyütünüz" Feedback ini verecek
-        // Tersi durumda da "Lütfen sayiyi kücültünüz" gösterecek
-        // feedback("yaklastin");
         if(userGuess < generatedNumber) {
             feedback("Too Low");
         } else {
@@ -31,7 +28,7 @@ while(currentStep < maxNumberOfStep){
         }
     }
 
-    currentStep++; // currentStep = currentStep + 1;
+    currentStep++; 
 }
 
 
